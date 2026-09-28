@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Prediction Result</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../static/css/materialize.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="blue darken-4">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Medical Cost Predictor</a>
+        </div>
+    </nav>
+
+    <div class="container center-align" style="margin-top: 100px;">
+        <h4 class="red-text">Predicted Amount:</h4>
+        <h5 class="black-text">{{ pred }}</h5>
+        <br><br>
+        <a href="/" class="btn-large blue darken-3">Predict Again</a>
+    </div>
+
+    <!-- Materialize JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/materialize.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medical Cost Prediction</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="purple darken-4">
+    <div class="nav-wrapper container">
+      <a class="brand-logo">Medical Cost</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h4 class="center red-text">Predict Medical Insurance Cost</h4>
+    <form action="/predict" method="POST">
+      <div class="row">
+        <div class="input-field col s4">
+          <input name="age" type="number" placeholder="Age" required>
+        </div>
+        <div class="input-field col s4">
+          <select name="Gender" required>
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+          </select>
+          <label>Gender</label>
+        </div>
+        <div class="input-field col s4">
+          <input name="bmi" type="text" placeholder="BMI" required>
+        </div>
+        <div class="input-field col s4">
+          <input name="children" type="number" placeholder="Number of children" required>
+        </div>
+        <div class="input-field col s4">
+          <select name="smoker" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+          <label>Do you smoke?</label>
+        </div>
+        <div class="input-field col s4">
+          <select name="region" required>
+            <option value="0">Northwest</option>
+            <option value="1">Northeast</option>
+            <option value="2">Southeast</option>
+            <option value="3">Southwest</option>
+          </select>
+          <label>Region</label>
+        </div>
+        <div class="col s12 center">
+          <button type="submit" class="btn-large red">Predict</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+ <!-- At the END before </body> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    M.FormSelect.init(elems);
+  });
+</script>
+
+</body>
+</html>
